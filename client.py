@@ -9,7 +9,6 @@ from tkinter import *
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 queue = Queue()
 
-
 def error(err):
 	errorWin = Tk()
 	errorWin.title("Error")
@@ -79,6 +78,12 @@ connection_made = False
 
 sendButton = Button(master=mainWin,text="Send",command=send)
 sendButton.grid(row=4,column=1,columnspan=2,padx=5,pady=5)
+
+def exit_program():
+	mainWin.destroy()
+	quit()
+
+mainWin.protocol("WM_DELETE_WINDOW", exit_program)
 
 while mainWin:
 	if not queue.empty():
