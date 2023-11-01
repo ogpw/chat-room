@@ -3,7 +3,7 @@ import threading
 from queue import Queue
 from tkinter import *
 
-##This version of the client does not use OOP IT FUCKING WORKS
+##This version of the client does not use OOP IT WORKS
 ##TODO: send a username/alias to server to be shown instead of IP
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
